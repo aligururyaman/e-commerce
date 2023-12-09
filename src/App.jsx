@@ -16,6 +16,7 @@ import Profile from './pages/profile/Profile';
 import ProtectedRoute from './pages/ProtectedRoute';
 import Basket from './pages/Basket/Basket';
 import Error from './pages/Error/Error';
+import Admin from './pages/Admin/Admin';
 
 function App() {
 
@@ -32,6 +33,8 @@ function App() {
             <Route path="/signin" component={Signin} />
             <Route path="/signup" component={Signup} />
             <Route path="/sepet" component={Basket} />
+            <ProtectedRoute path="/admin" component={Admin} admin={true} />
+           
             <ProtectedRoute path="/profile" component={Profile} />
             <Route path="*" component={Error} />
           </Switch>

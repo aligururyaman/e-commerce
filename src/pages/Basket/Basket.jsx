@@ -22,7 +22,7 @@ const Basket = ({ item }) => {
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
 
-    const { items, removeFromBasket,  } = useBasket()
+    const { items, removeFromBasket, emptyBasket  } = useBasket()
     const total = items.reduce((acc, obj) => acc + obj.price, 0)
 
     const handleSubmitForm = async () => {

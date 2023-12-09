@@ -66,6 +66,13 @@ const Navbar = () => {
                   </Link>
                 )
               }
+              {
+                user?.role === 'admin' && (
+                  <Link to="/admin">
+                    <Button colorScheme="blue" variant="ghost" >Admin</Button>
+                  </Link>
+                )
+              }
               <Link to="/profile">
                 <Button variant='solid'>
                   Profil
